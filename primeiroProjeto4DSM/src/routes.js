@@ -11,8 +11,29 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="login" component={Login} />
-        <Stack.Screen name="main" component={Main} />
+        <Stack.Screen name="login" component={Login} options={{
+          title: 'Login',
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#3498db',
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            color: 'white'
+          }
+        }} />
+        <Stack.Screen name="main" component={Main} options={{
+          title: 'GitHub Viewer',
+          headerTitleAlign: 'center',
+          headerLeft: null,
+          headerStyle: {
+            backgroundColor: '#3498db',
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            color: 'white'
+          }
+        }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
